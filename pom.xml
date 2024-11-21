@@ -10,9 +10,18 @@
 	</parent>
 	<groupId>com.sji.si</groupId>
 	<artifactId>tp2</artifactId>
+	<packaging>pom</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>tp2</name>
 	<description>TP 2 SI </description>
+	<modules>
+		<module>api-gateway</module>
+		<module>discovery</module>
+		<module>etudiant-service</module>
+		<module>inscription-service</module>
+		<module>notification-service</module>
+		<module>composite-service</module>
+	</modules>
 	<url/>
 	<licenses>
 		<license/>
