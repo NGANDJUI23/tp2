@@ -17,19 +17,22 @@ public class InscriptionService {
         inscription.setStatut(true);
         return inscriptionRepository.save(inscription);
     }
-    public List<Inscription> getAllInscripEtudiant(Long idE){
+
+    public List<Inscription> getAllInscripEtudiant(Long idE) {
         return inscriptionRepository.findByIdEtudiant(idE);
     }
 
-    public List<Inscription> liste_inscription(){
+    public List<Inscription> liste_inscription() {
         return inscriptionRepository.findAllByStatut(true);
     }
+
     //    public List<Inscription> getByStatut(){
     //        return inscriptionRepository.findAllByStatut(true);
     //    }
     public Inscription modifier_inscription(Inscription inscription) {
         return inscriptionRepository.save(inscription);
     }
+
     public Boolean supprimer_inscription(long id) {
         Inscription a = inscriptionRepository.findInscriptionById(id);
         a.setStatut(false);
