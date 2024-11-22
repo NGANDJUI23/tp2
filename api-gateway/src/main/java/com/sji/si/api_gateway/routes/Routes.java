@@ -18,7 +18,7 @@ public class Routes {
     @Bean
     public RouterFunction<ServerResponse> etudiantServiceRoute(){
         return GatewayRouterFunctions.route("etudiant-manager")
-                .route(RequestPredicates.path("/api/etudiant/**"), HandlerFunctions.http("http://localhost:8081"))
+                .route(RequestPredicates.path("/api/etudiants/**"), HandlerFunctions.http("http://localhost:8081"))
                 .build();
     }
 
@@ -40,6 +40,13 @@ public class Routes {
     public RouterFunction<ServerResponse> abscenceServiceRoute(){
         return GatewayRouterFunctions.route("abscence-manager")
                 .route(RequestPredicates.path("/api/abscence/**"), HandlerFunctions.http("http://localhost:8084"))
+                .build();
+    }
+
+    @Bean
+    public RouterFunction<ServerResponse> compositeServiceRoute(){
+        return GatewayRouterFunctions.route("composite-manager")
+                .route(RequestPredicates.path("/api/composite/**"), HandlerFunctions.http("http://localhost:8085"))
                 .build();
     }
 

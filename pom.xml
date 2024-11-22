@@ -21,6 +21,7 @@
 		<module>inscription-service</module>
 		<module>notification-service</module>
 		<module>composite-service</module>
+		<module>absence-service</module>
 	</modules>
 	<url/>
 	<licenses>
